@@ -3,15 +3,826 @@
     --blue-grey-100: #CFD8DC;
     --blue-grey-200: #B0BEC5;
     --blue-grey-900: #263238;
+    --blue-grey-500: #78909C; /* Added to match the Figma color */
+    --white: #FFFFFF; /* Added to match the Figma color */
+    --black-900: #111111; /* Added to match the Figma color */
+    --black: #000000; /* Added to match the Figma color */
+    --dark-grey: #191919; /* Added to match the Figma color */
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    color: #000;
-    text-align: center; 
+    color: var(--black);
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-header, footer {
+/* Header */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-grey-900);
+    color: var(--white);
+    padding: 1.5rem 0;
+}
+
+/* Logo & ix.png */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.logo-container img:first-child {
+    max-height: 3.5rem;
+    width: auto;
+}
+
+.logo-container img:last-child {
+    max-height: 3rem;
+    width: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.nav-links a {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+}
+
+/* Section 1 (Global) */
+.section-1 {
     background-color: var(--blue-grey-50);
-    color: #fff;
-    padding: 2rem 4rem;   
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* Heading */
+.section-1 h1 {
+    font-family: 'Georgia', serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    line-height: 1.4;
+    color: var(--black-900);
+    max-width: 85%;
+    margin: 2.5rem auto 2.5rem auto;
+}
+
+/* Paragraph */
+.section-1 p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--black);
+    max-width: 20rem;
+    margin: 0 auto 2.8rem auto;
+}
+
+/* About Us Button */
+.section-1 .cta-button {
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+}
+
+/* Image Styling */
+.section-1 img {
+    width: 326px;
+    height: 153px;
+    object-fit: cover;
+    display: block;
+    margin: 1rem auto 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+/* Section 2 Styling */
+    .section-2 {
+        text-align: center;
+        padding: 2rem 1rem;
+        max-width: 35rem;
+        margin: 0 auto;
+}
+
+
+
+
+    /* Asterisk (*) Styling */
+    .section-2 .asterisk {
+        font-size: 3.5rem;
+        text-align: center;
+        font-weight: bold;
+        display: block;
+        margin-top: 4rem;
+        margin-bottom: auto;
+}
+
+
+    /* Section 2 Heading */
+    .section-2 h2 {
+        font-family: Georgia, serif;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1rem;
+}
+
+    /* Section 2 Subheading (h3) */
+    .section-2 h3 {
+        font-family: 'Arial', sans-serif;
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1.5rem;
+}
+
+    /* Section 2 Paragraph (p) */
+    .section-2 p {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
+        margin-top: 0.5rem;
+}
+
+
+    /* Section 2 List Items */
+    .section-2 li {
+        text-align: center;
+        margin-top: 1.5rem;
+}
+
+
+/* Section 3 Styling */
+.section-3 {
+    background-color: var(--blue-grey-500);
+    width: 390px;
+    height: 564px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+/* Quote (h2) Styling */
+.section-3 h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #FFFFFF;
+    max-width: 80%;
+    margin-bottom: 1.8rem;
+}
+
+.section-3 .author {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--blue-grey-50);
+    margin-top: 1.5rem;
+}
+
+/* Author Title */
+.section-3 .author-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--blue-grey-50);
+    margin-top: 1rem;
+    
+}
+
+/* Section 4 Styling */
+.section-4 {
+    background-color: var(--blue-grey-200);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    width: 390px;
+    height: 1949px;
+}
+
+/* Top Asterisk (Centered) */
+.section-4 .asterisk:first-of-type {
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Section 4 Main Heading */
+.section-4 h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Section 4 Description (Intro Paragraph) */
+.section-4 p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 20rem;
+    margin: 0 auto 2rem auto;
+}
+
+/* Left-Aligned Asterisks (Below Intro & Before Sections) */
+.section-4 .asterisk:not(:first-of-type) {
+    font-size: 3.5rem;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Subheadings (Residential & Commercial Architecture) */
+.section-4 h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: left;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* List Styling */
+.section-4 ul {
+    max-width: 20.5rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    text-align: left;
+    
+}
+
+/* List Items */
+.section-4 ul li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Images */
+.section-4 img {
+    width: 100%;
+    max-width: 20.4rem;
+    height: auto;
+    max-height: 14.25rem;
+    border-radius: 5px;
+    margin: .5rem auto 2rem auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+
+/* Section 5 Styling */
+.section-5 {
+    background-color: var(--blue-grey-900);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 390px;
+    height: 516px;
+     
+}
+
+/* Subscription Box */
+.subscription-box {
+    background-color: var(--blue-grey-50);
+    width: 326px;
+    height: 388px;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+    margin-left: .5rem;
+    border-radius: 3px;
+    text-align: center;
+}
+
+/* Heading */
+.subscription-box h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 3.375rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+/* Paragraph */
+.subscription-box p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--black);
+    width: fit-content;
+    max-width: 18rem;
+    margin: 0 auto 1.5rem auto;
+    
+}
+
+/* Sign-Up Button */
+.subscription-box .signup-btn {
+    display: inline-block;
+    background-color: var(--black-900);
+    color: var(--blue-grey-50);
+    font-size: 1rem;
+    font-weight: 600;
+    width: 89px;
+    height: 56px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 56px;
+    
+}
+
+
+
+.footer {
+    background-color: var(--dark-grey);
+    color: var(--blue-grey-50);
+    width: 390px;
+    height: 554px;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo and Branding */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-logo img:first-child {
+    width: 204px;
+    height: 80px;
+}
+
+.footer-logo img:last-child {
+    width: 123px;
+    height: 78px;
+}
+
+/* Footer Tagline */
+.footer-tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--blue-grey-200);
+    max-width: 18rem;
+    margin: 0 auto 1.5rem auto;
+}
+
+
+/* Footer Navigation Sections */
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    max-width: 326px;
+    margin: 2rem auto 0;
+    margin-right: 1rem;
+    text-align: left;
+}
+
+/* Each Footer Section */
+.footer-section {
+    flex: 1;
+    min-width: 100px;
+}
+
+/* Section Titles */
+.footer-section h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+/* List Styling */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* List Items */
+.footer-section ul li {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer Links */
+.footer-section ul li a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+/* Footer Disclaimer */
+.footer-disclaimer {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+    opacity: 0.7;
+    text-align: center;
+    max-width: 80%;
+    margin-top: 1.5rem;
+    color: var(--blue-grey-200);
+}
+
+
+/* Medium Screens */
+@media screen and (min-width: 768px) {
+    /* Section 1 */
+    .section-1 {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+
+    .section-1 h1 {
+        font-size: 2.2rem;
+        max-width: 90%;
+    }
+
+    .section-1 p {
+        max-width: 28rem;
+    }
+
+    .section-1 img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    /* Section 2 */
+    .section-2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .service-item {
+        width: 45%;
+    }
+
+    /* Section 3 */
+    .section-3 {
+        width: 100%;
+        max-width: 768px;
+        padding: 3rem;
+    }
+
+
+
+  .section-4 {
+        width: 100%;
+        max-width: 768px;
+
+        text-align: left;
+        padding: 4rem 2rem;
+        height: auto;
+    }
+    
+  .section-4 p {
+        max-width: 40rem;
+        margin: 0 auto 2rem auto;
+     }
+
+/* List Styling */
+.section-4 ul {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    text-align: left;
+    
+       
+}
+    
+    /* Section 5 */
+    .section-5 {
+        width: 100%;
+        max-width: 768px;
+        padding: 3rem;
+        margin: 0 auto;
+    }
+
+    .subscription-box {
+        max-width: 400px;
+    }
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 3rem;
+    }
+
+    .footer-sections {
+        width: 100%;
+        max-width: 768px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    /* General Layout for Larger Screens */
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    /* HEADER */
+    .header-container {
+        
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .logo-container img:first-child {
+        max-height: 4rem;
+    }
+
+    .logo-container img:last-child {
+        max-height: 3.5rem;
+    }
+
+    .nav-links {
+        gap: 2rem;
+        margin-top: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.25rem;
+    }
+
+    /* SECTION 1 - HERO SECTION */
+    .section-1 {
+        text-align: center;
+        width: 100%;
+        max-width: 1440px;
+        padding: 6rem 3rem;
+    }
+
+    .section-1 h1 {
+        
+        font-size: 3rem;
+        max-width: 1440px;
+    }
+
+    .section-1 p {
+        font-size: 1.25rem;
+        max-width: 55rem;
+    }
+
+    .section-1 .cta-button {
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+    }
+
+    .section-1 img {
+        width: 100%;
+        max-width: 1440px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* SECTION 2 - SERVICES */
+    .section-2 {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 6rem 3rem;
+    }
+
+    .section-2 h2 {
+        font-size: 2.5rem;
+    }
+
+    .section-2 p {
+        font-size: 1.25rem;
+        max-width: 60rem;
+    }
+
+    .service-item {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        text-align: left;
+        max-width: 900px;
+        margin: 3rem auto;
+    }
+
+    .service-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .service-item p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    /* SECTION 3 - TESTIMONIAL */
+    .section-3 {
+        width: 100%;
+        max-width: 1440px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-3 h2 {
+        font-size: 2.5rem;
+        max-width: 1440px;
+    }
+
+    .section-3 .author {
+        font-size: 1.25rem;
+    }
+
+    /* SECTION 4 - ARCHITECTURE */
+    .section-4 {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        text-align: left;
+        padding: 6rem 3rem;
+    }
+
+    .section-4 p {
+        max-width: 55rem;
+        margin: 0 auto 3rem auto;
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    .section-4 .asterisk {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    /* 🔹 FLEXBOX for Residential & Commercial */
+    .architecture-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    /* Reverse layout for Commercial Architecture */
+    .commercial-architecture {
+        flex-direction: row-reverse;
+    }
+
+    /* Image Adjustments */
+    .architecture-section img {
+        max-width: 500px;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Text Area Adjustments */
+    .architecture-text {
+        flex: 1;
+        max-width: 55%;
+    }
+
+    .architecture-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .architecture-text ul {
+        padding-left: 2rem;
+    }
+
+    .architecture-text ul li {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    /* SECTION 5 - SUBSCRIPTION */
+    .section-5 {
+        width: 100%;
+        max-width: 1440px;
+        height: 450px;
+    }
+
+    .subscription-box {
+        width: 100%;
+        max-width: 674px;
+        height: auto;
+        padding: 4rem;
+        border-radius: 10px;
+    }
+
+    /* FOOTER */
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1440px;
+        height: 450px;
+        padding: 3rem;
+    }
+
+    .footer-logo img:first-child {
+        width: 100%;
+        max-width: 1440px;
+        justify-items: left;
+        height: auto;
+    }
+
+    .footer-logo img:last-child {
+        width: 160px;
+        height: auto;
+    }
+
+    .footer-tagline {
+        font-size: 1.1rem;
+        max-width: 40rem;
+    }
+
+    .footer-sections {
+        max-width: 800px;
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.25rem;
+    }
+
+    .footer-section ul li {
+        font-size: 1rem;
+    }
+
+    .footer-disclaimer {
+        font-size: 1rem;
+        max-width: 50%;
+    }
 }
